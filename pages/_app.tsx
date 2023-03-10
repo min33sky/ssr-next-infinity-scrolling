@@ -4,7 +4,12 @@ import { useRef } from 'react';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  Component,
+  pageProps,
+}: AppProps<{
+  dehydratedState: any;
+}>) {
   console.log('### Client - pageProps: ', pageProps);
 
   const queryClientRef = useRef<QueryClient>();
