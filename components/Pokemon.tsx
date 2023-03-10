@@ -34,6 +34,8 @@ export default function Pokemon() {
       },
     );
 
+  console.log('data: ', data);
+
   const fetchMoreRef = useRef<HTMLDivElement>(null);
   const intersecting = useIntersection(fetchMoreRef);
 
